@@ -1,6 +1,6 @@
-const siteName = process.env?.NUXT_PUBLIC_SITE_NAME || 'siteName'
-const siteShortName = process.env?.NUXT_PUBLIC_SITE_SHORT_NAME || 'siteShortName'
-const siteDescription = process.env?.NUXT_PUBLIC_SITE_DESCRIPTION || 'siteDescription'
+const siteName = process.env.NUXT_PUBLIC_SITE_NAME || 'siteName'
+const siteShortName = process.env.NUXT_PUBLIC_SITE_SHORT_NAME || 'siteShortName'
+const siteDescription = process.env.NUXT_PUBLIC_SITE_DESCRIPTION || 'siteDescription'
 
 /**
  * configMeta

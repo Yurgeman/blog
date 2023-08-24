@@ -1,4 +1,4 @@
-import { configMeta } from './utils/config'
+import { configMeta, configPWA } from './utils/config'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 
@@ -69,7 +69,7 @@ export default defineNuxtConfig( {
     // ...other options
   },
 
-  // pwa: configPWA,
+  pwa: configPWA,
   // pwa: ( process.env.NODE_ENV === 'production' ) ? configPWA : { workbox: { enabled: false } },
 
   // pwa:      {
