@@ -1,0 +1,37 @@
+// Controls
+
+:root {
+  // panel
+  --nw-border-radius:        .3rem;
+
+  // control
+  --nw-border-radius-large:  .8rem;
+  --nw-border-width:         1px;
+  --nw-control-height:       2.8rem;
+
+  --nw-control-height-large: 3.4rem;
+  --nw-control-height-small: 2.2rem;
+  --nw-control-width-large:  30rem;
+  --nw-control-width-medium: 12.5rem;
+
+  // border
+  --nw-control-width-small:  8rem;
+  --nw-control-width-xsmall: 3.125rem;
+  --nw-min-height:           320px;
+
+  // Layout
+  --nw-min-width:            320px;
+  --nw-panel-size:           4.5rem;
+
+  // z-index
+  --nw-z-index:              1000;
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --nw-control-height:       2.4rem;
+    --nw-control-height-large: 2.8rem;
+    --nw-control-height-small: 2rem;
+    --nw-panel-size:           4rem;
+  }
+}

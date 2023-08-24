@@ -1,0 +1,175 @@
+/** fade*/
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .3s ease-in-out;
+}
+
+/** side-menu*/
+.menu-enter,
+.menu-leave-to {
+  opacity:             0;
+  transform:           translateX(-100%);
+  transition-property: transform, opacity;
+}
+
+.menu-enter-active,
+.menu-leave-active {
+  transition:          .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-left*/
+.slide-left-enter,
+.slide-left-leave-to {
+  opacity:             0;
+  transform:           translateX(10%);
+  transition-property: transform, opacity;
+}
+
+.slide-left-enter-active,
+.slide-left-leave-active {
+  transition:          all .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-right*/
+.slide-right-enter,
+.slide-right-leave-to {
+  opacity:             0;
+  transform:           translateX(-10%);
+  transition-property: transform, opacity;
+}
+
+.slide-right-enter-active,
+.slide-right-leave-active {
+  transition:          all .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-right-full*/
+.slide-right-full-enter,
+.slide-right-full-leave-to {
+  transform:           translateX(100%);
+  //opacity: 0
+  transition-property: transform, opacity;
+}
+
+.slide-right-full-enter-active,
+.slide-right-full-leave-active {
+  transition:          transform .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-top*/
+.slide-top-enter,
+.slide-top-leave-to {
+  opacity:             0;
+  transform:           translateY(10%);
+  transform-origin:    top center;
+  transition-property: transform, opacity;
+}
+
+.slide-top-enter-active,
+.slide-top-leave-active {
+  transition:          all .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-bottom*/
+.slide-bottom-enter,
+.slide-bottom-leave-to {
+  opacity:             0;
+  transform:           translateY(-10%);
+  transition-property: transform, opacity;
+}
+
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+  transition:          all .3s ease-in-out;
+  transition-property: transform, opacity;
+}
+
+/** slide-left-full **/
+.slide-left-full-enter-active {
+  animation: slide-left-full 0.3s ease-in-out;
+}
+
+.slide-left-full-leave-active {
+  animation: slide-left-full 0.3s ease-in-out reverse;
+}
+
+@keyframes slide-left-full {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/** modal **/
+.modal-enter-active {
+  animation: modal 0.3s ease-in-out;
+}
+
+.modal-leave-active {
+  animation: modal 0.3s ease-in-out reverse;
+}
+
+@keyframes modal {
+  0% {
+    transform: translateY(100%) scale(0);
+  }
+  80% {
+    transform: translateY(0) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) scale(1);
+  }
+}
+
+/** notify **/
+.notify-enter-active {
+  animation: notify 0.4s ease-in-out;
+}
+
+.notify-leave-active {
+  animation: notify 0.4s ease-in-out reverse;
+}
+
+@keyframes notify {
+  0% {
+    transform: translateY(-50%) rotateX(270deg) scale(0);
+  }
+  70% {
+    transform: translateY(10%) rotateX(100deg) scale(1.1);
+  }
+  100% {
+    transform: translateY(0) rotateX(0) scale(1);
+  }
+}
+
+/** notify **/
+.bottom-small-enter-active {
+  animation: bottom-small 0.3s ease-in-out;
+}
+
+.bottom-small-leave-active {
+  animation: bottom-small 0.3s ease-in-out reverse;
+}
+
+@keyframes bottom-small {
+  0% {
+    transform: translateY(10%);
+    opacity:   0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity:   1;
+  }
+}

@@ -1,0 +1,28 @@
+@import "assets/styles/var";
+@import "assets/styles/mixins";
+
+.nw-page {
+  @include vh-100;
+  background-color: var(--nw-color-background-emphatic);
+  display:          flex;
+  flex-direction:   column;
+
+  &__header {
+    order: 0;
+  }
+
+  &__footer {
+    order: 2;
+  }
+
+  &__header,
+  &__footer {
+    flex: none
+  }
+
+  &__body {
+    flex:       1;
+    min-height: 10rem;
+    order:      1;
+  }
+}

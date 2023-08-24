@@ -1,0 +1,23 @@
+{
+  "private":         true,
+  "name":            "site-name",
+  "scripts":         {
+    "build":           "nuxt build",
+    "dev":             "nuxt dev",
+    "generate":        "nuxt generate",
+    "preview":         "nuxt preview",
+    "update packages": "ncu --target minor -u && pnpm install"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "^0.8.0",
+    "@nuxt/image":    "1.0.0-rc.1",
+    "nuxt":           "^3.6.5"
+  },
+  "dependencies":    {
+    "@kevinmarrec/nuxt-pwa": "^0.17.0",
+    "@pinia/nuxt":           "^0.4.11",
+    "keen-slider":           "^6.8.6",
+    "pinia":                 "^2.1.6",
+    "sass":                  "^1.66.1"
+  }
+}

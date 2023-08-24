@@ -1,0 +1,94 @@
+@import "../var";
+@import "../mixins";
+
+.nw-ellipsis {
+  @include ellipsis
+}
+
+.nw-h1, h1,
+.nw-h2, h2,
+.nw-h3, h3,
+.nw-h4, h4,
+.nw-h5, h5,
+.nw-h6, h6,
+.nw-h-large {
+  line-height: 1.1;
+  margin:      0 auto;
+  max-width:   $device-tablet-landscape;
+  text-align:  center;
+}
+
+.nw-h-large {
+  font-size: 4rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: 3rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: 2.4rem;
+  }
+}
+
+.nw-h1, h1 {
+  font-size: 3rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: 2.4rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: 2rem;
+  }
+}
+
+.nw-h2, h2 {
+  font-size: 2.4rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: 2rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: 1.6rem;
+  }
+}
+
+.nw-h3, h3 {
+  font-size: 2rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: 1.6rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: 1.3rem;
+  }
+}
+
+.nw-h4, h4 {
+  font-size: 1.6rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: 1.2rem;
+  }
+}
+
+.nw-h5, h5 {
+  font-size: 1.2rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: .9rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: .8rem;
+  }
+}
+
+.nw-h6, h6 {
+  font-size: .9rem;
+  @media (max-width: $device-tablet-small) {
+    font-size: .7rem;
+  }
+  @media (max-width: $device-phone) {
+    font-size: .6rem;
+  }
+}
+
+p {
+  margin-bottom: var(--nw-margin-small);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

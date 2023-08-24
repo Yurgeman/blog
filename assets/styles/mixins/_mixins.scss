@@ -1,0 +1,66 @@
+@mixin vh-100 {
+  min-height: 100vh;
+  //noinspection CssInvalidPropertyValue
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
+}
+
+@mixin ellipsis {
+  white-space:   nowrap;
+  overflow:      hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin ellipsisRows($rows: 2) {
+  overflow:           hidden;
+  hyphens:            auto;
+  display:            -webkit-box;
+  -webkit-line-clamp: $rows;
+  -webkit-box-orient: vertical;
+}
+
+@mixin cover {
+  position: absolute;
+  top:      0;
+  bottom:   0;
+  left:     0;
+  right:    0;
+}
+
+@mixin scrollContent {
+  content-visibility:     auto;
+  contain-intrinsic-size: 1500px;
+}
+
+@mixin flex-center {
+  display:         flex;
+  align-items:     center;
+  justify-content: center;
+}
+
+@mixin transition($param: all, $duration: .3s) {
+  transition: $param $duration ease-in-out;
+}
+
+@mixin transitionAll {
+  transition: .35s ease-in-out;
+}
+
+@function border() {
+  $color: var(--nw-border-width) solid var(--nw-color-border);
+  @return $color;
+}
+
+@mixin section {
+  display:               grid;
+  grid-template-columns: auto minmax(calc(300px - 1.2rem), $device-desktop) auto;
+
+  &:before,
+  &:after {
+    content:   "";
+    display:   block;
+    width:     auto;
+    min-width: var(--nw-margin);
+  }
+}

@@ -1,0 +1,15 @@
+@import "../var";
+@import "../mixins";
+
+a {
+  color:           var(--nw-color-link);
+  cursor:          pointer;
+  text-decoration: none;
+
+  &:active,
+  &:hover {
+    color:           var(--nw-color-link-hover);
+    outline:         none;
+    text-decoration: underline;
+  }
+}

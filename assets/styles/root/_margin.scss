@@ -1,0 +1,21 @@
+:root {
+  --nw-margin:         1rem;
+  --nw-margin-large:   2rem;
+  --nw-margin-small:   .5rem;
+  --nw-margin-xlarge:  4rem;
+  --nw-margin-xsmall:  .25rem;
+  --nw-margin-xxlarge: 8rem;
+  --nw-margin-xxsmall: .125rem;
+}
+
+@media screen and (max-width: 640px) {
+  :root {
+    --nw-margin:         .8rem;
+    --nw-margin-large:   1.6rem;
+    --nw-margin-small:   .4rem;
+    --nw-margin-xlarge:  2.5rem;
+    --nw-margin-xsmall:  .2rem;
+    --nw-margin-xxlarge: 4rem;
+    --nw-margin-xxsmall: .1rem;
+  }
+}

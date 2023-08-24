@@ -1,0 +1,63 @@
+@import "../var";
+@import "../mixins";
+
+// main colors
+:root {
+
+  --nw-color-background:            var(--nw-color-primary-100);
+  --nw-color-background-emphatic:   #FFFFFF;
+  --nw-color-background-info-muted: var(--nw-color-info-100);
+  --nw-color-background-muted:      var(--nw-color-primary-200);
+  --nw-color-base:                  var(--nw-color-primary-900);
+  --nw-color-border:                var(--nw-color-primary-300);
+  --nw-color-danger:                var(--nw-color-danger-500);
+  --nw-color-dark:                  #000000;
+  --nw-color-info:                  var(--nw-color-info-500);
+  --nw-color-inverse:               var(--nw-color-info-100);
+  --nw-color-link:                  var(--nw-color-info);
+
+  // LIGHT MODE
+
+  // TEXT
+  --nw-color-link-hover:            var(--nw-color-info-600);
+  --nw-color-primary:               var(--nw-color-primary-700);
+  --nw-color-rgb-contrast:          0, 0, 0;
+  --nw-color-rgb-dark:              0, 0, 0;
+  --nw-color-rgb-default:           255, 255, 255;
+
+  // COLORS
+  --nw-color-rgb-white:             255, 255, 255;
+  --nw-color-shadow:                rgba(0, 0, 0, .07);
+  --nw-color-success:               var(--nw-color-success-500);
+  --nw-color-text:                  var(--nw-color-primary-900);
+  --nw-color-text-emphatic:         #000000;
+  --nw-color-text-muted:            var(--nw-color-primary-500);
+  --nw-color-warning:               var(--nw-color-warning-500);
+
+  // BORDER
+  --nw-color-white:                 #FFFFFF;
+}
+
+// DARK MODE
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    // TEXT
+    --nw-color-background:            var(--nw-color-primary-800);
+    --nw-color-background-emphatic:   var(--nw-color-primary-900);
+    --nw-color-background-info-muted: var(--nw-color-info-700);
+    --nw-color-background-muted:      var(--nw-color-primary-700);
+    --nw-color-border:                var(--nw-color-primary-700);
+
+    // COLORS
+    --nw-color-link:                  var(--nw-color-warning-500);
+    --nw-color-link-hover:            var(--nw-color-warning-400);
+    --nw-color-rgb-contrast:          255, 255, 255;
+    --nw-color-rgb-default:           0, 0, 0;
+    --nw-color-shadow:                rgba(255, 255, 255, .1);
+    --nw-color-text:                  var(--nw-color-primary-200);
+    --nw-color-text-emphatic:         #FFFFFF;
+
+    // BORDER
+    --nw-color-text-muted:            var(--nw-color-primary-400);
+  }
+}

@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: *?
+Disallow: /*?*
+Disallow: /*%
+Allow: /
+Host: https://site.ru
+Sitemap: https://site.ru/sitemap.xml

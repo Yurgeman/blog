@@ -1,0 +1,178 @@
+@import "../var";
+
+label {
+  font-size:   .9rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+input:not([type=file]):not([type=radio]):not([type=checkbox]),
+textarea,
+select,
+.content-editable {
+  color: var(--nw-color-text);
+
+  &:focus {
+    color: var(--nw-color-info);
+  }
+
+  &::selection {
+    background-color: var(--nw-color-info);
+    color:            var(--nw-color-inverse);
+  }
+}
+
+input:not([type=file]):not([type=radio]):not([type=checkbox]),
+textarea,
+.content-editable {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px var(--nw-color-background) inset;
+    transition:         color 600000s 0s;
+    //color: var(--nw-color-text) !important
+    &:focus {
+      -webkit-box-shadow: 0 0 0px 1000px var(--nw-color-background-info-muted) inset;
+    }
+  }
+
+  &::-moz-placeholder,
+  &::-ms-input-placeholder {
+    color:       var(--nw-color-text-muted) !important;
+    font-weight: normal;
+    opacity:     .6;
+  }
+
+  &::placeholder {
+    color:       var(--nw-color-text-muted);
+    font-weight: normal;
+    opacity:     .6;
+  }
+}
+
+input:not([type=file]):not([type=radio]):not([type=checkbox]),
+.nw-input {
+  height:  var(--nw-control-height);
+  padding: 0 var(--nw-margin-small);
+
+  &.small {
+    height: var(--nw-control-height-small);
+  }
+
+}
+
+.nw-input,
+.nw-textarea {
+  border:        var(--nw-border-width) solid var(--nw-color-border);
+  border-radius: var(--nw-border-radius);
+  padding:       0 var(--nw-margin-small);
+
+  &:disabled {
+    border-color: var(--nw-color-border) !important;
+    color:        var(--nw-color-text-muted) !important;
+  }
+
+  &:focus,
+  &:active { //background-color: var(--nw-color-background-muted)
+    border-color: var(--nw-color-info);
+    color:        var(--nw-color-info);
+  }
+
+  &--danger {
+    border-color: var(--nw-color-danger);
+
+    &:focus {
+      border-color: var(--nw-color-danger);
+      color:        var(--nw-color-danger) !important;
+    }
+  }
+
+  &--success {
+    border-color: var(--nw-color-success);
+
+    &:focus {
+      border-color: var(--nw-color-success);
+      color:        var(--nw-color-success) !important;
+    }
+  }
+
+  &--muted {
+    background-color: var(--nw-color-background);
+  }
+}
+
+.nw-textarea {
+  height:  calc(var(--nw-control-height) * 2);
+  padding: var(--nw-margin-small);
+}
+
+fieldset {
+  border-radius: var(--nw-border-radius);
+  padding:       var(--nw-margin);
+
+  legend {
+    border-radius: 500px;
+  }
+}
+
+/*********** Baseline, reset styles ***********/
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance:         none;
+  background:         transparent;
+  cursor:             pointer;
+  width:              100%;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider-items track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: var(--nw-color-background-muted);
+  border-radius:    0.5rem;
+  height:           0.5rem;
+}
+
+/* slider-items thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  /* Override default look */
+  appearance:         none;
+  background-color:   var(--nw-color-info);
+  /* Centers thumb on the track */
+  border-radius:      1rem;
+  height:             1.5rem;
+  margin-top:         -8px;
+  width:              1.5rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline:        3px solid var(--nw-color-info);
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider-items track */
+input[type="range"]::-moz-range-track {
+  background-color: var(--nw-color-background-muted);
+  border-radius:    0.5rem;
+  height:           0.5rem;
+}
+
+/* slider-items thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: var(--nw-color-info);
+  border:           none;
+  /*Removes extra border that FF applies*/
+  border-radius:    1rem;
+  height:           1.5rem;
+  width:            1.5rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+  outline:        3px solid var(--nw-color-info);
+  outline-offset: 0.125rem;
+}
