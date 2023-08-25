@@ -27,6 +27,14 @@ export default defineNuxtConfig( {
     '@kevinmarrec/nuxt-pwa',
     '@nuxt/image',
     '@nuxt/devtools',
+    [ '@nuxtjs/plausible', {
+      domain:               'blog.arecords.store',
+      autoOutboundTracking: false,
+      autoPageviews:        true,
+      hashMode:             false,
+      trackLocalhost:       false,
+      apiHost:              'https://plausible.docsme.ru'
+    } ],
     [ '@pinia/nuxt', { autoImports: [ 'defineStore', [ 'defineStore', 'definePiniaStore' ] ] } ]
   ],
 
